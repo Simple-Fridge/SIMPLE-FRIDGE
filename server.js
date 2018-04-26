@@ -27,8 +27,8 @@ app.use(express.static("public"));
 
 // Routes
 // =============================================================
-// require("./controllers/fridgeController")(app);
-app.get('/', function (req, res) {
+require("./controllers/fridgeController");
+app.get("/", function (req, res) {
   res.render("index", {name: "Cool Dude!"});
 });
 // Starts the server to begin listening
