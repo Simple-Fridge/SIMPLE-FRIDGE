@@ -1,13 +1,28 @@
 {{#each name}}
 {{/each}}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+<link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/flatly/bulmaswatch.min.css">
 <body>
-  <navbar>
-    <div class="container">
-<img class="logo" src="/img/simpleFridge.png">
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="/img/simpleFridge2.png" alt="" width="112" height="28">
+    </a>
+    <div class="navbar-end">
+    <a class="navbar-item">About</a>
+    <a class="navbar-item">Donate</a>
+    <a class="navbar-item">How-to</a>
     </div>
-  </navbar>
-  
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true">About</span>
+      <span aria-hidden="true">Donate</span>
+      <span aria-hidden="true">How-to</span>
+    </a>
+  </div>
+</nav>
+<br><br><br>
+    <div class="container">
+      <img class="logo" src="/img/simpleFridge.png">
+    </div>
 <div class="field">
   <label class="label">{{name}}</label>
   <div class="control">
@@ -17,34 +32,61 @@
 
 <div class="field is-grouped">
   <div class="control">
-    <button class="searchbutton">Search</button>
+    <button class="button is-link is-pulled-right" id="buttonId">Search</button>
   </div>
-  <div class="control">
-    <button class="button is-link" id="buttonId">Cancel</button>
+</div>
+<br><br>
+<div id="macro-calc"></div><script type="text/javascript">!function(d,s,id,url){
+  var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+url;fjs.parentNode.insertBefore(js,fjs);}
+}(document,'script','macro-calc-script', '://macroscalculator.herokuapp.com//widget.js');
+
+</script>
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Nutrients</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success">Save changes</button>
+      <button class="button">Cancel</button>
+    </footer>
   </div>
 </div>
 </body>
+
 <style media="screen">
-.container {
-background: #FCE69F;
+.navbar {
+background-color: #F3D352;
+color: black;
+padding-top: 12px;
+padding-bottom: 6px;
 }
 body {
-    padding: 5px;
+    padding: auto;
     width: 75%;
     margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, serif;
     margin-bottom: 30px;
   }
-img {
+.logo {
+    text-align: center;
     width: 30%;
     height: 30%;
-    padding: 5px;
     margin-left: auto;
     margin-right: auto;
     display: block;
     
 }
 #buttonId {
-    background-color: green;
+    background-color: #419513;
+    float: right;
+}
+.control {
+  text-align: center;
 }
 </style>
