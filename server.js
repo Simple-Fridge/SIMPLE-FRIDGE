@@ -29,7 +29,7 @@ app.use(express.static("public"));
 // =============================================================
 require("./controllers/fridgeController");
 app.get("/", function (req, res) {
-  res.render("index", {name: "Cool Dude!"});
+  res.render("index", {name: ""});
 });
 // Starts the server to begin listening
 // =============================================================

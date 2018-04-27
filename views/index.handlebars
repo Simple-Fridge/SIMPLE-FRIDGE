@@ -1,13 +1,15 @@
 {{#each name}}
 {{/each}}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+<link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/minty/bulmaswatch.min.css">
 <body>
-  <navbar>
+  <section class="hero is-primary">
+  <div class="hero-body">
+  </div>
+  </div>
+</section>
     <div class="container">
-<img class="logo" src="/img/simpleFridge.png">
+      <img class="logo" src="/img/simpleFridge.png">
     </div>
-  </navbar>
-  
 <div class="field">
   <label class="label">{{name}}</label>
   <div class="control">
@@ -23,10 +25,16 @@
     <button class="button is-link" id="buttonId">Cancel</button>
   </div>
 </div>
+<div id="macro-calc"></div><script type="text/javascript">!function(d,s,id,url){
+  var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+url;fjs.parentNode.insertBefore(js,fjs);}
+}(document,'script','macro-calc-script', '://macroscalculator.herokuapp.com//widget.js');
+
+</script>
 </body>
+
 <style media="screen">
-.container {
-background: #FCE69F;
+.hero {
+background-color: #FCE69F;
 }
 body {
     padding: 5px;
@@ -38,7 +46,6 @@ body {
 img {
     width: 30%;
     height: 30%;
-    padding: 5px;
     margin-left: auto;
     margin-right: auto;
     display: block;
