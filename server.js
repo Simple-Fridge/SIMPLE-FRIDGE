@@ -1,4 +1,4 @@
-var sequelize = require("sequelize") 
+var sequelize = require("sequelize")
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
@@ -27,14 +27,15 @@ app.use(express.static("public"));
 
 // Routes
 // =============================================================
-require("./controllers/fridgeController");
-app.get("/", function (req, res) {
-  res.render("index", {name: ""});
-});
+var fridgRouter = require("./controllers/fridgeController");
+var htmlRouter = require("./controllers/htmlRoutes");
+
+app.use(fridgRouter, htmlRouter);
+
 // Starts the server to begin listening
 // =============================================================
-db.sequelize.sync({ force: false }).then(function() {
-    app.listen(PORT, function() {
-        console.log("App listening on PORT " + PORT);
-    });
+db.sequelize.sync({ force: false }).then(function () {
+  app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+  });
 });
