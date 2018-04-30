@@ -4,6 +4,7 @@ var router = express.Router();
 
 var usdaApi = require("./usdaApi.js");
 
+
 router.get("/api/foodSearch/:food", function(req, res) {
     // get the food data
     // from the params passed 
@@ -17,5 +18,6 @@ router.get("/api/foodSearch/:food", function(req, res) {
 
     });
 });
+
 
 module.exports = router;

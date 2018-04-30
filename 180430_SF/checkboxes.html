@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API Request URL Generation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+        <label class="checkbox" >
+            <input type="checkbox" id="checkBox1">
+            Dairy & Eggs
+        </label>
+        <label class="checkbox" >
+            <input type="checkbox" id="checkBox2">
+            Finfish & Shellfish
+        </label>
+        <label class="checkbox" >
+            <input type="checkbox" id="checkBox3">
+            Nut & Seed Products
+        </label>
+        <label class="checkbox" >
+            <input type="checkbox" id="checkBox4">
+            Cereal Grains & Pasta
+        </label>
+        <label class="checkbox" >
+            <input type="checkbox" id="checkBox5" >
+            Breakfast Cereals
+        </label>
+        <label class="checkbox" >
+            <input type="checkbox" id="checkBox6">
+            Legumes & Legume Products
+        </label>
+        <label class="checkbox" >
+            <input type="checkbox" id="checkBox7">
+            Baked Products
+        </label>
+        <label class="checkbox" >
+            <input type="checkbox" id="checkBox8">
+            Restaurant Foods
+        </label>
+        <label class="checkbox" >
+            <input type="checkbox" id="checkBox9">
+            Sweets
+        </label>
+    </div>
+    <button type="button" id = "enterButton" >Enter</button>
+  </section>
+  <script>
+
+        var outString = "api.nal.usda.gov/ndb/nutrients/?";
+
+        $( "#enterButton" ).click(function() {
+            if ($('#checkBox1').prop('checked')){
+                outString += "fg=0100&";
+            }
+            if ($('#checkBox2').prop('checked')){
+                outString += "fg=1500&";
+            }
+            if ($('#checkBox3').prop('checked')){
+                outString += "fg=1200&";
+            }
+            if ($('#checkBox4').prop('checked')){
+                outString += "fg=2000&";
+            }
+            if ($('#checkBox5').prop('checked')){
+                outString += "fg=0800&";
+            }
+            if ($('#checkBox6').prop('checked')){
+                outString += "fg=1600&";
+            }
+            if ($('#checkBox7').prop('checked')){
+                outString += "fg=1800&";
+            }
+            if ($('#checkBox8').prop('checked')){
+                outString += "fg=3600&";
+            }
+            if ($('#checkBox9').prop('checked')){
+                outString += "fg=1900&";
+            }
+
+        
+
+        if (!outString.includes("fg"))
+        {
+            outString = "api.nal.usda.gov/ndb/nutrients/?";
+        }
+
+        else 
+        {
+            outString += "format=xml&api_key=DEMO_KEY&nutrients=205&max=10"
+        }
+
+        console.log(outString);
+
+        outString = "api.nal.usda.gov/ndb/nutrients/?"
+
+    });
+  </script>
+  </body>
+</html>
+
