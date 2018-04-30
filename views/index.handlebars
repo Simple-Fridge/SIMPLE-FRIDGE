@@ -1,15 +1,117 @@
-<div class="field">
-  <div class="control">
-    <input class="input" type="text" placeholder="Text input">
-  </div>
-</div>
 
-<div class="field is-grouped">
-  <div class="control">
-    <button  id="submit" class="button is-link">Submit</button>
+{{#each name}} {{/each}}
+<link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/flatly/bulmaswatch.min.css">
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="/img/simpleFridge3.png" alt="" width="112" height="28">
+      </a>
+
+      <!--Mobile Nav-->
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <!--Desktop Nav-->
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/api/about">About</a>
+        <a class="navbar-item" href="/api/donate">Donate</a>
+        <a class="navbar-item" href="/api/howto">How-to</a>
+      </div>
+    </div>
+
+  </nav>
+  <!--Logo-->
+
+  <figure class="image is-100by100">
+    <img src="/img/simpleFridge.png">
+  </figure>
+
+  <!-- <div class="field">
+    <div class="control">
+      <input class="input is-medium" type="text" placeholder="">
+    </div>
+  </div>-->
+
+  <!-- Main container -->
+  <nav class="level">
+    <!-- Left side -->
+    <div class="level-left">
+      <div class="level-item">
+        <div class="control">
+          <input class="input is-half" type="text" placeholder="">
+        </div>
+      </div>
+    </div>
+    <!-- Right side -->
+    <div class="level-right">
+      <p class="level-item control">
+        <a class="button is-rounded" id="buttonId">Search</a>
+      </p>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <!--Macro Calculator-->
+  <section id="section">
+    <div class="box" id="macro-calc">
+      <h5 class="title is-5">Macro Calculator</h5>
+      <script type="text/javascript">!function (d, s, id, url) {
+          var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + url; fjs.parentNode.insertBefore(js, fjs); }
+        }(document, 'script', 'macro-calc-script', '://macroscalculator.herokuapp.com//widget.js');
+      </script>
+    </div>
+  </section>
+
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Nutrients</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <!-- Content ... -->
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success">Save changes</button>
+        <button class="button">Cancel</button>
+      </footer>
+    </div>
   </div>
-  <div class="control">
-    <button  class="button is-text">Cancel</button>
-  </div>
-</div>
-<script src="assets/js/index.js"></script>
+</body>
+
+<style media="screen">
+  body {
+    padding: auto;
+    margin: auto;
+    font-family: Georgia, serif;
+    margin-bottom: 30px;
+  }
+
+  .navbar {
+    background-color: #F3D352;
+    padding-top: 12px;
+    padding-bottom: 6px;
+  }
+
+  .navbar-item {
+    color: black;
+  }
+
+  #buttonId {
+    background-color: #419513;
+  }
+
+  .box {
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+  }
+</style>

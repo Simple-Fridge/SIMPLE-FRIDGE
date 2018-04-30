@@ -31,6 +31,7 @@ var fridgRouter = require("./controllers/fridgeController");
 var htmlRouter = require("./controllers/htmlRoutes");
 
 app.use(fridgRouter, htmlRouter);
+
 // Starts the server to begin listening
 // =============================================================
 db.sequelize.sync({ force: false }).then(function () {
