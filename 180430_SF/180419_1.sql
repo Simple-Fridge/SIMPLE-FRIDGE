@@ -1,12 +1,7 @@
-DROP DATABASE IF EXISTS nutrition_db;
+DROP DATABASE if exists users_db;
 
-CREATE DATABASE nutrition_db;
-
-USE nutrition_db;
-
-SELECT * FROM nutrients; 
-
-SELECT * FROM foods; 
+CREATE DATABASE users_db;
+USE users_db;
 
 DROP TABLE if exists users;
 

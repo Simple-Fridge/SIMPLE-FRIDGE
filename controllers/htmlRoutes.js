@@ -24,3 +24,30 @@ router.get("/", function (req, res) {
 window.location.replace("?=" + food +"")
     module.exports = router;
 // get value out of text box
+
+//ABOUT page
+
+router.get("/about", function(req, res) {
+    res.render("about");
+});
+
+//DONATE page
+
+router.get("/charity", function(req, res) {
+    res.render("charity");
+});
+
+//HOW TO page
+
+router.get("/howto", function(req, res) {
+    res.render("howto");
+});
+
+//BMI page
+
+router.get("/bmi", function(req, res) {
+    res.render("bmi");
+});
+
+
+module.exports = router;
