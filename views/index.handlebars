@@ -1,36 +1,29 @@
 
 {{#each name}} {{/each}}
-<link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/flatly/bulmaswatch.min.css">
+<link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
 
 <body>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="/img/simpleFridge3.png" alt="" width="112" height="28">
+      <a class="navbar-item" href="">
+        <img src="/img/simpleFridge4.png" alt="" width="112" height="28">
       </a>
 
-      <!--Mobile Nav-->
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
     </div>
     <!--Desktop Nav-->
     <div class="navbar-menu">
       <div class="navbar-end">
         <a class="navbar-item" href="/about">About</a>
         <a class="navbar-item" href="/charity">Donate</a>
-        <a class="navbar-item" href="/api/howto">How-to</a>
+        <a class="navbar-item" href="/howto">How-to</a>
+        <a class="navbar-item" href="/bmi">BMI Calculator</span>
       </div>
     </div>
 
   </nav>
   <!--Logo-->
 
-  <figure class="image is-100by100">
-    <img src="/img/simpleFridge.png">
-  </figure>
+  <img src="/img/simpleFridge.png" class="img-fluid rounded" id="logo">
 
   <!-- <div class="field">
     <div class="control">
@@ -39,22 +32,13 @@
   </div>-->
 
   <!-- Main container -->
-  <nav class="level">
-    <!-- Left side -->
-    <div class="level-left">
-      <div class="level-item">
-        <div class="control">
-          <input class="input is-half" type="text" placeholder="">
-        </div>
-      </div>
-    </div>
-    <!-- Right side -->
-    <div class="level-right">
-      <p class="level-item control">
-        <a class="button is-rounded" id="buttonId">Search</a>
-      </p>
-    </div>
-  </nav>
+  <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-success" type="submit">Search</button>
+  </div>
+</div>
+
   <br>
   <br>
   <br>
@@ -68,23 +52,6 @@
       </script>
     </div>
   </section>
-
-  <div class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Nutrients</p>
-        <button class="delete" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <!-- Content ... -->
-      </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success">Save changes</button>
-        <button class="button">Cancel</button>
-      </footer>
-    </div>
-  </div>
 </body>
 
 <style media="screen">
@@ -101,8 +68,13 @@
     padding-bottom: 6px;
   }
 
+
   .navbar-item {
     color: black;
+  }
+
+  .logo {
+    float: right;
   }
 
   #buttonId {
