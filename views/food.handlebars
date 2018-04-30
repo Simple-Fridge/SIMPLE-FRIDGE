@@ -1,28 +1,18 @@
 <h1>Nutrient Bank</h1>
 
-<h3>A list of saved nutrients</h3>
+<h3>A list of saved nutrients for {{name}}</h3>
 
 <ul>
-    {{#each wishes}}
+    {{#each food}}
     <li>
-        <p>ID: {{this.id}}</p>
-        <p>Name: {{this.name}}</p>
-        <p>Category: {{this.Category}}</p>
-        <p>Protein: {{this.Protein}}</p>
-        <p>Total Lipid (Fat): {{this.TotalLipidFat}}</p>
-        <p> Carbohydrate By Difference: {{this. CarbohydrateByDifference}}</p>
-        <p> Fiber Total Dietary: {{this.FiberTotalDietary}}</p>
-        <p>Sugars (Total): {{this.SugarsTotal}}</p>
-        <p>Cholesterol: {{this.Cholesterol}}</p>
-        <p>Value: {{this.Value}}</p>
-
+        <p>{{this.formattedName}}</p>
     </li>
     {{/each}}
 </ul>
-
+{{!-- 
 <form action="/" method="POST">
     <textarea type="text" name="wish"></textarea>
 <textarea type="text" name="wish"></textarea>
 
     <button type="submit">Submit</button>
-</form>
+</form> --}}

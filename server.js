@@ -29,8 +29,8 @@ app.use(express.static("public"));
 // =============================================================
 var fridgRouter = require("./controllers/fridgeController");
 var htmlRouter = require("./controllers/htmlRoutes");
-
-app.use(fridgRouter, htmlRouter);
+var usdaRouter = require("./controllers/usdaController")
+app.use(fridgRouter, htmlRouter, usdaRouter);
 
 // Starts the server to begin listening
 // =============================================================
