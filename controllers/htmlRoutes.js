@@ -11,5 +11,12 @@ router.get("/", function(req, res) {
     res.render("index");
 });
 
+router.get("/about", function(req, res) {
+    res.render("about");
+});
+
+router.get("/charity", function(req, res) {
+    res.render("charity");
+});
 
 module.exports = router;
