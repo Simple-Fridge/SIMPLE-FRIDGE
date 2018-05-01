@@ -11,29 +11,33 @@
 "updatedAt": "2018-05-01T18:36:13.000Z"
 }, --}}
 
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 <table class="table">
     <thead>
         <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Email</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Protein</th>
+            <th>Total Lipid Fat</th>
+            <th>Carbohydrate</th>
+            <th>Fiber</th>
+            <th>Sugars</th>
+            <th>Cholesterol</th>
         </tr>
     </thead>
     <tbody>
+        {{#each dbFood}}
         <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
+            <td>{{this.id}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.Protein}}</td>
+            <td>{{this.TotalLipidFat}}</td>
+            <td>{{this.CarbohydrateByDifference}}</td>
+            <td>{{this.FiberTotalDietary}}</td>
+            <td>{{this.SugarsTotal}}</td>
+            <td>{{this.Cholesterol}}</td>
         </tr>
-        <tr>
-            <td>Mary</td>
-            <td>Moe</td>
-            <td>mary@example.com</td>
-        </tr>
-        <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-        </tr>
+        {{/each}}
     </tbody>
 </table>

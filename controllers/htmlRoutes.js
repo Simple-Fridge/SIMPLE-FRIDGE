@@ -79,8 +79,8 @@ router.get("/favorite", function (req, res) {
     // findAll returns all entries for a table when used with no options
     db.Food.findAll({}).then(function (dbFood) {
         // We have access to the todos as an argument inside of the callback function
-        //   res.json(dbFood);
-        res.render("favorite", { dbFood: dbFood })
+        //res.json(dbFood);
+        res.render("favorite", { dbFood: dbFood });
     });
 });
 
