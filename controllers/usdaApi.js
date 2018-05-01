@@ -44,6 +44,19 @@ function findNutrientsByFoodName(foodName, callback) {
   });
 }
 
+function findNutrientsByRecipeName(query, foodName, callback) {
+
+  var data = 'no results';
+  var url =  query 
+  ; console.log(url)
+  request(url, function (error, response, body) {
+    if (error) throw error;
+    var results = JSON.parse(body);
+    var foodItem = results.list.item[0].ndbno;
+    console.log(foodItem);
+    callback(foodItem);
+  });
+}
 module.exports = {
   foodSearch: foodSearch,
   nutrientSearch: nutrientSearch,
