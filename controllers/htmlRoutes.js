@@ -21,8 +21,8 @@ router.get("/", function (req, res) {
     }
     return res.render("index", hbsObject);
 });
-window.location.replace("?=" + food +"")
-    module.exports = router;
+// window.location.replace("?=" + food +"")
+   //module.exports = router;
 // get value out of text box
 
 //ABOUT page
@@ -39,9 +39,9 @@ router.get("/charity", function(req, res) {
 
 //HOW TO page
 
-router.get("/howto", function(req, res) {
-    res.render("howto");
-});
+//router.get("/howto", function(req, res) {
+//    res.render("howto");
+//});
 
 //BMI page
 
