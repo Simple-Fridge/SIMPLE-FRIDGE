@@ -48,14 +48,9 @@ router.get("/howto", function (req, res) {
 router.get("/bmi", function (req, res) {
     res.render("bmi");
 });
-
+//create tables
 router.post("/savedfood", function (req, res) {
     console.log(req.body)
-    // for (var j = 0; j < 6; j++) {
-    //     // var cell = row.insertCell(i+j);
-    //     jqStringCurr = jqString + (j + 1).toString();
-    //     $(jqStringCurr).html(data[j].formattedName);
-    // }
     db.Food.create({
         name: req.body.foodName,
 
@@ -73,14 +68,20 @@ router.post("/savedfood", function (req, res) {
 
 
     }).then(function (dbFood) {
-        // We have access to the new todo as an argument inside of the callback function
         res.json(dbFood);
     })
         .catch(function (err) {
-            // Whenever a validation or flag fails, an error is thrown
-            // We can "catch" the error to prevent it from being "thrown", which could crash our node app
             res.json(err);
         })
-    });
+});
 
-    module.exports = router;
+router.get("/favorite", function (req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.Food.findAll({}).then(function (dbFood) {
+        // We have access to the todos as an argument inside of the callback function
+        //   res.json(dbFood);
+        res.render("favorite", { dbFood: dbFood })
+    });
+});
+
+module.exports = router;

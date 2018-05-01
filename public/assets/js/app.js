@@ -31,16 +31,12 @@ $(document).ready(function () {
             nutraList = data;
             foodName = searchInput
             console.log(data);
-            var table = document.getElementById("#nutrient-table");
             var jqString = "#myTd";
             var jqStringCurr = "";
 
             for (var j = 0; j < 6; j++) {
-                // var cell = row.insertCell(i+j);
                 jqStringCurr = jqString + (j + 1).toString();
                 $(jqStringCurr).html(data[j].formattedName);
-                // console.log(data[j].formattedName)
-                $("#nutrient-results").append("\n");
             }
 
 
@@ -52,8 +48,6 @@ $(document).ready(function () {
         e.preventDefault();
         if (foodName && nutraList.length === 6) {
             $.post("/savedfood", { nutraList: nutraList, foodName: foodName }, function (data) {
-                console.log(data)
-                //else???
             })
         }
     });
