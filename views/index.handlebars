@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9f1b63bf5f9f4c9c1b41707856d93252f3ea766a
 {{#if food}}
 <h2>{{name}}</h2>
 {{/if}} {{#each food}}
@@ -12,7 +16,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
-                <img src="/img/simpleFridge4.png" alt="" width="112" height="28">
+                <img src="/img/simpleFridge4.png" alt="">
             </a>
         </div>
         <!--Desktop Nav-->
@@ -20,7 +24,7 @@
             <div class="navbar-end">
                 <a class="navbar-item" href="/about">About</a>
                 <a class="navbar-item" href="/charity">Donate</a>
-                <a class="navbar-item" href="/howto">How-to</a>
+                <a class="navbar-item" href="/recipe">Recipes</a>
                 <a class="navbar-item" href="/bmi">Calculators</a>
             </div>
         </div>
@@ -28,26 +32,18 @@
   </nav>
   <!--Logo-->
 
-  <img src="/img/simpleFridge.png" class="img-fluid rounded" id="logo">
+  <img src="/img/simpleFridge.png" class="center" id="logo">
 
-  <!-- Main container -->
-  <nav class="level">
-    <!-- Left side -->
-    <div class="level-left">
-      <div class="level-item">
-        <div class="control">
-          <input class="input is-half" type="text" id="search-input" placeholder="">
-        </div>
-      </div>
+  
+    <div class="container">
+      <div class="input-group mb-3">
+      <input type="text" class="form-control" id="search-input" placeholder="" aria-label="Nutrients" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+      <button class="btn btn-sm" type="button" id="buttonIdPost">Save to Favorites</button>
+      <button class="btn btn-sm" type="button" id="buttonId">Search</button>
     </div>
-    <!-- Right side -->
-    <div class="level-right">
-      <p class="level-item control">
-        <a class="button is-rounded" id="buttonIdPost">Save 2 Favs</a>
-        <a class="button is-rounded" id="buttonId">Search</a>
-      </p>
-    </div>
-  </nav>
+
+
   <br>
   <br>
   <br>
@@ -72,7 +68,7 @@
     </table>
   </div>
   <!--Macro Calculator-->
-  <section id="section">
+<!--<section id="section">
     <div class="box" id="macro-calc">
       <h5 class="title is-5">Macro Calculator</h5>
       <script type="text/javascript">!function (d, s, id, url) {
@@ -80,14 +76,13 @@
         }(document, 'script', 'macro-calc-script', '://macroscalculator.herokuapp.com//widget.js');
       </script>
     </div>
-  </section>
+  </section>-->
 </body>
 
 <style media="screen">
   body {
     padding: auto;
     margin: auto;
-    font-family: Georgia, serif;
     margin-bottom: 30px;
   }
 
@@ -102,8 +97,11 @@
     color: black;
   }
 
-  .logo {
-    float: right;
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
 
   #buttonId {
