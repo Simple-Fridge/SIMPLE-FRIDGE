@@ -1,4 +1,16 @@
 
+
+<h1>index page</h1>
+{{#if food}}
+<h2>{{name}}</h2>
+{{/if}}
+{{#each food}}
+<p>{{name}}</p>
+<p>{{value}}</p>
+<p>{{unit}}</p>
+{{/each}}
+{{#each name}} {{/each}}
+
 <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
 <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
