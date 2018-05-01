@@ -21,8 +21,22 @@ router.get("/", function (req, res) {
     }
     return res.render("index", hbsObject);
 });
-window.location.replace("?=" + food +"")
-    module.exports = router;
+
+router.get("/recipesAPI", function (req, res) {
+    console.log(req.query)
+    var recipeName = req.query.recipe;
+    var hbsObject = {}
+    if (recipeName) {
+        console.log(recipeName)
+        return usdaApi.findNutrientsByRecipeName(req.query,recipeName, function (data) {
+            hbsObject = { food: data, name: recipeName }
+            res.render("index", hbsObject);
+        });
+    }
+    return res.render("index", hbsObject);
+});
+// window.location.replace("?=" + food +"")
+//     module.exports = router;
 // get value out of text box
 
 //ABOUT page
@@ -37,10 +51,10 @@ router.get("/charity", function(req, res) {
     res.render("charity");
 });
 
-//HOW TO page
+//RECIPE page
 
-router.get("/howto", function(req, res) {
-    res.render("howto");
+router.get("/recipe", function(req, res) {
+    res.render("recipe");
 });
 
 //BMI page
