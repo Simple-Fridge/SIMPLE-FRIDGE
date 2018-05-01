@@ -12,9 +12,9 @@ router.get("/api/foodSearch/:food", function(req, res) {
     
     var foodName = req.params.food;
     usdaApi.findNutrientsByFoodName(foodName, function(data){
-        //res.json(data);
+        res.json(data);
 
-        res.render("food", {food: data, name: foodName});
+        //res.render("food", {food: data, name: foodName});
 
     });
 });
