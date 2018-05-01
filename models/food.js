@@ -3,35 +3,25 @@ module.exports = function (sequelize, DataTypes) {
         name: {
             type: DataTypes.STRING
         },
-        category: {
+        Protein: {
             type: DataTypes.STRING
         },
-        Protein: {
-            type: DataTypes.INTEGER
-        },
         TotalLipidFat: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         },
         CarbohydrateByDifference: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         },
         FiberTotalDietary: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         },
         SugarsTotal: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         },
         Cholesterol: {
-            type: DataTypes.INTEGER
-        },
-        Value: {
             type: DataTypes.STRING
         }
 
     });
-
-
-
-
     return Food;
 };
