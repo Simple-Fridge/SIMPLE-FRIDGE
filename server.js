@@ -33,7 +33,7 @@ var usdaRouter = require("./controllers/usdaController");
 // can use / on both routes
 app.use("/", usdaRouter);
 app.use("/", htmlRouter);
-app.use(fridgRouter, htmlRouter);
+// app.use(fridgRouter, htmlRouter);
 
 
 // Starts the server to begin listening
